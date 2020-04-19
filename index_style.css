@@ -1,0 +1,105 @@
+/************************************ Generalle ************************************/
+* {
+    margin: 0;
+
+}
+
+/************************************ Generalle SLUT ************************************/
+
+/************************************ SKIRFT ************************************/
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+/************************************ SKIRFT SLUT ************************************/
+
+/************************************ NAV ************************************/
+
+nav {}
+
+/************************************ NAV SLUT ************************************/
+
+main h1 {
+    z-index: 2;
+    font-size: 7vw;
+    position: absolute;
+    top: 20%;
+    left: 6%;
+    color: white
+}
+
+
+
+.splash_img img {
+    height: 90%;
+    width: 100%;
+}
+
+
+.group {
+    padding: 3vw;
+    background: lightblue;
+    /*    width: 100vw*/
+}
+
+
+.group .header,
+.col .wp-block-group__inner-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.group .col {
+    /*    padding: 5vw;*/
+
+}
+
+.group .col_1,
+.col_2 {
+    width: 40vw;
+    padding: 5vw;
+
+    flex-grow: 1;
+    flex-basis: 600px;
+}
+
+
+
+
+.img_banner img {
+    width: 100%
+}
+
+.txt_col {
+    padding: 2vw;
+}
+
+.txt_col .h2 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.txt_col .buttons .wp-block-group__inner-container {
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 1.2rem;
+    padding: 3vw;
+}
+
+
+@media screen and (max-width:600px) {
+
+    .txt_col .buttons .wp-block-group__inner-container {
+
+
+        font-size: 1rem;
+        padding: 3vw;
+    }

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <title>Forside</title>
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="index_style.css">
+
+    <!--    <link rel="stylesheet" href="index_style.css">-->
 
 </head>
 
@@ -13,7 +16,44 @@
 
     <header>
 
-        <nav>
+        <nav id="nav">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="Logo/logo_new_21-5.svg" alt="">
+                </div>
+            </a>
+
+            <div class="nav_right">
+
+                <ul class="nav_links show">
+
+                    <li>
+                        <a href="web.html">Til salg</a>
+                    </li>
+
+                    <li>
+                        <a href="om_os.html">Om os</a>
+                    </li>
+
+                    <li>
+                        <a href="destinationer.html">Destinationer</a>
+                    </li>
+
+                    <li>
+                        <a href="kontakt.html">Kontakt</a>
+                    </li>
+
+                    <li>
+                        <a href="om.html">Mere</a>
+                    </li>
+                </ul>
+
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
 
         </nav>
 
@@ -21,52 +61,65 @@
 
     <section id="splach"></section>
     <main>
-        <img src="" alt="">
         <h1></h1>
+        <div></div>
     </main>
 
-    <section id="info_content"></section>
-    <template>
-        <article class="oversigt">
-            <h2></h2>
-            <h3></h3>
-            <div class="col">
-                <p class="col_1"></p>
-                <p class="col_2"></p>
-            </div>
-        </article>
-    </template>
 
-    <section id="know_more_links"></section>
-    <template>
-        <article class="oversigt">
-            <div>
-                <div>
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <h2></h2>
-                    <a href="">
-                        <div class="button_1">
-                            <h3></h3>
-                            <img src="" alt="">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="button_2">
-                            <h3></h3>
-                            <img src="" alt="">
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </article>
-    </template>
 
     <footer></footer>
 
-    <script src=""></script>
-</body>
+    <script src="nav_script.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        const url = "http://majakepler.dk/kea/09_cms/21-5/wordpress/wp-json/wp/v2/pages/14";
+
+        let sektioner = [];
+        let json;
+
+
+        function start() {
+            console.log("start");
+            hentJSON();
+        }
+
+        async function hentJSON() {
+            console.log("hent json");
+
+            const resspons = await fetch(url)
+            //            sektioner = await resspons.json();
+            json = await resspons.json();
+
+            //            visMenu();
+            visSide();
+        }
+
+        function visSide() {
+            console.log(json);
+            document.querySelector("main h1").textContent = json.title.rendered;
+            document.querySelector("main div").innerHTML = json.content.rendered;
+        }
+
+
+        //        function visMenu() {
+        //
+        //            console.log(sektioner);
+        //            let dataFill = document.querySelector("#splach");
+        //            let template = document.querySelector("#sections");
+        //
+        //
+        //            sektioner.forEach(element => {
+        //                let klon = template.cloneNode(true).content;
+        //                klon.querySelector("h1").innerHTML = `${element.title.rendered}`;
+        //                klon.querySelector(".txt").innerHTML = `${element.content.rendered}`;
+        //                //                klon.querySelector("img").src = `${element.image}`;
+        //                dataFill.appendChild(klon);
+        //            })
+        //        }
+
+    </script>
+</body>
 
 </html>

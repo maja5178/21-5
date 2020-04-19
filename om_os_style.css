@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+
+}
+
+h1 {
+    font-size: 2rem;
+    padding-bottom: 1vw;
+
+}
+
+.top_img img {
+    width: 100%
+}
+
+.top_content {
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+
+.collum_1 .wp-block-group__inner-container {
+    display: flex;
+
+
+}
+
+/*
+.col {
+    flex-grow: 1;
+    flex-basis: 275px;
+}
+*/

@@ -1,23 +1,131 @@
-/************************************ Generalle ************************************/
-* {
-    margin: 0;
+header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 3;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5vw;
+    background-color: rgba(0, 0, 0, 0.63);
+    font-family: 'Barlow', sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+
+
+    padding-top: 1vw;
+    padding-bottom: 1vw;
 
 }
 
-/************************************ Generalle SLUT ************************************/
+a {
+    text-decoration: none;
+}
 
-/************************************ SKIRFT ************************************/
+.nav_right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-h1 {}
+.logo img {
+    width: 5vw;
 
-h2 {}
 
-h3 {}
+}
 
-/************************************ SKIRFT SLUT ************************************/
+.nav_links {
+    display: flex;
+    justify-content: space-around;
 
-/************************************ NAV ************************************/
+}
 
-nav {}
+.nav_links li {
+    list-style: none;
+    margin-right: 15px;
+}
 
-/************************************ NAV SLUT ************************************/
+.nav_links a {
+    text-decoration: none;
+    color: #ffffff;
+
+    letter-spacing: 3px;
+
+    font-size: 1rem;
+    font-family: 'Barlow', sans-serif;
+
+}
+
+/*.burger {
+    display: none;
+}*/
+
+.burger div {
+    display: none;
+}
+
+
+
+.hide {
+    visibility: hidden;
+}
+
+.color {
+    background-color: #f0f0f0;
+}
+
+.color_1 {
+    background-color: #f0f0f0;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+@media screen and (max-width:600px) {
+
+
+    .burger div {
+        display: block;
+
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 5px;
+    }
+
+    .nav_links {
+        display: none;
+    }
+
+    .nav_links {
+        position: absolute;
+        width: 50%;
+        height: 92vw;
+        top: 12.7vw;
+        background-color: rgba(0, 0, 0, 0.63);
+        display: flex;
+        align-self: flex-end;
+        flex-direction: column;
+        align-items: center;
+        transform: translatex(100%);
+        left: 0px;
+        transition: transform 0.5s ease-in-out;
+
+    }
+
+    .logo img {
+        width: 10vw
+    }
+
+
+    .show {
+        transform: translatex(70%);
+        transition: transform 0.5s ease-in-out;
+    }

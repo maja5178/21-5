@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>Kontakt</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="om_os_style.css">
 
 </head>
 
@@ -20,9 +19,46 @@
 
     </header>
 
+    <section id="splach"></section>
+    <main>
+        <h1></h1>
+        <div></div>
+    </main>
+
     <footer></footer>
 
-    <script src=""></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        const url = "http://majakepler.dk/kea/09_cms/21-5/wordpress/wp-json/wp/v2/pages/76";
+
+        let sektioner = [];
+        let json;
+
+
+        function start() {
+            console.log("start");
+            hentJSON();
+        }
+
+        async function hentJSON() {
+            console.log("hent json");
+
+            const resspons = await fetch(url)
+            //            sektioner = await resspons.json();
+            json = await resspons.json();
+
+            //            visMenu();
+            visSide();
+        }
+
+        function visSide() {
+            console.log(json);
+            document.querySelector("main h1").textContent = json.title.rendered;
+            document.querySelector("main div").innerHTML = json.content.rendered;
+        }
+
+    </script>
 
 </body>
 
