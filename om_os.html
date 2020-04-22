@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kontakt</title>
+    <title>Om os</title>
 
     <link rel="stylesheet" href="om_os_style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -13,7 +14,44 @@
 
     <header>
 
-        <nav>
+        <nav id="nav">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="Logo/logo_new_21-5.svg" alt="">
+                </div>
+            </a>
+
+            <div class="nav_right">
+
+                <ul class="nav_links show">
+
+                    <li>
+                        <a href="salg.html">Til salg</a>
+                    </li>
+
+                    <li>
+                        <a href="om_os.html">Om os</a>
+                    </li>
+
+                    <li>
+                        <a href="destinationer.html">Destinationer</a>
+                    </li>
+
+                    <li>
+                        <a href="kontakt.html">Kontakt</a>
+                    </li>
+
+                    <li>
+                        <a href="om.html">Mere</a>
+                    </li>
+                </ul>
+
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
 
         </nav>
 
@@ -25,7 +63,95 @@
         <div></div>
     </main>
 
-    <footer></footer>
+    <div class="lokal_nav">
+        <a href="#value">Vores værdier</a>
+        <a href="#history">Vores historie</a>
+        <a href="#koncept">Vores koncept</a>
+        <a href="#economy">Vores økonomi</a>
+        <a href="#value">Vores teams</a>
+        <a href="#value">10 års fødselsdag</a>
+    </div>
+
+    <section id="value">
+
+        <div class="value_content">
+            <div class="col col_1">
+                <h2>Vores værdier</h2>
+                <ul>
+                    <li>Vi udfordrer status quo</li>
+                    <li>Vi er ydmyge</li>
+                    <li>Vi er personlige og har det sjovt</li>
+                    <li>Vi stræber altid efter at give mere end forventet</li>
+                    <li>Vi har tillid til hinanden og vores omgivelser</li>
+                    <li>Vi er entusiastiske og dybt passionerede omkring det vi gør</li>
+                    <li>Vi er ordentlige og vælger altid den rigtige vej</li>
+                    <li>Vi holder af hverdagen</li>
+                </ul>
+            </div>
+            <div class="col">
+                <p>Vores værdier er ikke bare noget som står i en manual eller på en tavle, og aldrig bliver efterlevet. Alle de beslutninger vi træffer - både for vores foreninger og for os selv, træffer vi ud fra vores værdier.<br>Da vi i foråret 2016 valgte at formulere og nedskrive vores værdier, gjorde vi det ganske enkelt ud fra, hvordan vi har arbejdet med 21-5 siden vi fik ideen.<br>Vores værdier er ikke noget vi gerne vil have og være, det er noget vi hver dag gør og er.</p>
+            </div>
+        </div>
+        <div class="value_content_2">
+            <h3>Vi opfylder drømme og skaber livsglæde</h3>
+            <p>Målet for os er at opfylde drømmene om dejlige ferier i unikke ferieboliger, for på den måde at forøge livsglæden hos vores 21-5 familier.<br>Intet gør os derfor mere lykkelige, end når vores 21-5 familier skriver til os og fortæller om deres oplevelser i boligerne og områderne, og om hvordan medejerskabet i foreningen har en positiv indflydelse på deres liv.<br>Vi når vores mål ved at holde fast i og udelukkende arbejde ud fra vores værdier ovenfor.<br>Vi er meget taknemmelige, og føler os meget privilegerede over hver dag at arbejde med et på så mange områder positivt og glædeskabende koncept.</p>
+        </div>
+    </section>
+
+    <section id="history">
+        <div class="top">
+            <h2>Vores historie</h2>
+            <p>Her hos 21-5 har vi ikke kun et spændende koncept, men også en spændende historie. Du ka nu læse alt om være vores historie og hvordan dette fantasitiske firma er blevet skabt</p>
+        </div>
+
+        <a href="">
+            <div class="button">
+                <p>Læs mere</p>
+                <img src="imgs/arrow_right.png" alt="">
+            </div>
+        </a>
+    </section>
+
+    <section id="koncept">
+        <div class="splash">
+            <img src="imgs/banner_4.png" alt="">
+        </div>
+        <div class="text_content">
+            <div class="center">
+                <h2>Vores koncept</h2>
+                <p>Her hos 21-5 har vi ikke kun et spændende koncept, men også en spændende historie. Du ka nu læse alt om være vores historie og hvordan dette fantasitiske firma er blevet skabt</p>
+            </div>
+
+            <a href="">
+                <div class="button">
+                    <p>Læs mere</p>
+                    <img src="imgs/arrow_right.png" alt="">
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+
+    <section id="economy">
+        <div class="top">
+            <h2>Vores økonomi</h2>
+            <p>Her hos 21-5 har vi ikke kun et spændende koncept, men også en spændende historie. Du ka nu læse alt om være vores historie og hvordan dette fantasitiske firma er blevet skabt</p>
+        </div>
+
+        <a href="">
+            <div class="button">
+                <p>Læs mere</p>
+                <img src="imgs/arrow_right.png" alt="">
+            </div>
+        </a>
+
+    </section>
+
+    <footer>
+    </footer>
+
+    <script src="nav_script.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", start);

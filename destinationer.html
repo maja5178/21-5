@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kontakt</title>
-
+    <title>Destinatioer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index_style.css">
+
+    <link rel="stylesheet" href="destinationer_style.css">
+
+    <!--    <link rel="stylesheet" href="index_style.css">-->
 
 </head>
 
@@ -14,16 +16,175 @@
 
     <header>
 
-        <nav>
+        <nav id="nav">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="Logo/logo_new_21-5.svg" alt="">
+                </div>
+            </a>
+
+            <div class="nav_right">
+
+                <ul class="nav_links show">
+
+                    <li>
+                        <a href="salg.html">Til salg</a>
+                    </li>
+
+                    <li>
+                        <a href="om_os.html">Om os</a>
+                    </li>
+
+                    <li>
+                        <a href="destinationer.html">Destinationer</a>
+                    </li>
+
+                    <li>
+                        <a href="kontakt.html">Kontakt</a>
+                    </li>
+
+                    <li>
+                        <a href="om.html">Mere</a>
+                    </li>
+                </ul>
+
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
 
         </nav>
 
     </header>
 
+    <section id="splach"></section>
+    <main>
+        <h1></h1>
+        <div></div>
+    </main>
+
+    <section id="destinatioer"></section>
+    <template>
+        <article>
+            <div class="test_flex">
+                <h1 class="h1"></h1>
+
+                <div class="img"></div>
+            </div>
+        </article>
+    </template>
+
+
+    <section id="proces">
+
+        <div class="top">
+            <h2>Udvælgelsen af bolige og destination</h2>
+        </div>
+
+        <div class="collums">
+            <div class="col">
+                <p>Som beskrevet under klargøring konverterer vores klargøringsteam (Team Jazz) boligerne fra at være boliger med møbler i, til at blive skønne og indbydende hjem.<br>Det er ikke noget man bare gør. Det kræver indsigt, stil og en fast hånd. Det har Team Jazz.<br><br>Ud over at hver bolig skal "jazzes op" med løsøre og velvalgte praktiske genstande, skal hver bolig fyldes op med kaffe, the, krydderier, chips, chokolade, øl, vand, vin, køkkenrulle, toiletpapir, værktøj samt meget meget mere.<br>Det skal være sådan, at når man er i en 21-5 bolig, skal man tænke "DET har de søreme OGSÅ tænkt på".</p>
+            </div>
+
+            <div class="col">
+                <p>Vores ejere i alle 21-5 foreningerne melder løbende tilbage, når de er i boligerne - er alt ok? Intet giver os mere glæde, end når vi får de første og umiddelbare kommentarer, når vores 21-5 familier ankommer til en bolig for første gang.<br><br>Vi får hver dag flere mails fra vores 21-5 familier, som gerne vil rose og give tilbagemeldinger på boligerne og andet. Vi lever for disse mails - de er en af de vigtigste årsager til at vi laver, det vi laver.<br><br>Vores mål er, at hver bolig skal være et hjem, som man har lyst til at komme hjem til igen og igen og igen.</p>
+            </div>
+        </div>
+
+        <a href="">
+            <div class="button">
+                <p>Læs mere</p>
+                <img src="imgs/arrow_right.png" alt="">
+            </div>
+        </a>
+
+
+    </section>
+
+
     <footer></footer>
 
-    <script src=""></script>
+    <script src="nav_script.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", start1);
+
+        const pageurl = "http://majakepler.dk/kea/09_cms/21-5/wordpress/wp-json/wp/v2/pages/107";
+
+        let sektioner = [];
+        let json;
+
+
+        function start1() {
+            console.log("start");
+            hentJSON1();
+        }
+
+        async function hentJSON1() {
+            console.log("hent json");
+
+            const resspons = await fetch(pageurl)
+            json = await resspons.json();
+            visSide();
+        }
+
+        function visSide() {
+            console.log(json);
+            document.querySelector("main h1").textContent = json.title.rendered;
+            document.querySelector("main div").innerHTML = json.content.rendered;
+            start();
+        }
+
+
+
+
+
+
+
+
+
+        const posturl = "http://majakepler.dk/kea/09_cms/21-5/wordpress/wp-json/wp/v2/destination/";
+
+        let artikler = [];
+        let template;
+
+
+        function start() {
+            console.log("start");
+            hentJSON();
+        }
+
+        async function hentJSON() {
+            console.log("hent json");
+
+            const resspons = await fetch(posturl)
+            //            sektioner = await resspons.json();
+            artikler = await resspons.json();
+
+            visTemplate();
+        }
+
+        function visTemplate() {
+
+            console.log(artikler);
+            let dataFill = document.querySelector("#destinatioer");
+            let template = document.querySelector("template");
+
+
+            artikler.forEach(element => {
+                let klon = template.cloneNode(true).content;
+                klon.querySelector(".h1").textContent = `${element.title.rendered}`;
+                klon.querySelector(".img").innerHTML = `${element.content.rendered}`;
+                klon.querySelector("article").addEventListener("click", () => {
+                    location.href = `destination.html?id=${element.id}`;
+                })
+                dataFill.appendChild(klon);
+            })
+        }
+
+    </script>
 </body>
 
 </html>

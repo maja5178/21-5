@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Forside</title>
+    <title>Til salg</title>
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="salg_style.css">
 
     <!--    <link rel="stylesheet" href="index_style.css">-->
 
@@ -70,41 +70,33 @@
         <div></div>
     </main>
 
-    <footer>
-        <div class="collum">
-            <div class="col">
-                <img src="Logo/logo_new_21-5.svg" alt="">
-            </div>
-            <div class="col">
-                <ul class="footer_links">
-                    <li>
-                        <a href="">Ofte stillede spøgsmål</a>
-                    </li>
+    <div class="lokal_nav">
+        <a href="#value">Til salg</a>
+        <a href="#history">Gensalg</a>
+        <a href="#koncept">Vores koncept</a>
+        <a href="#economy">Vores økonomi</a>
+        <a href="#value">Vores teams</a>
+        <a href="#value">10 års fødselsdag</a>
+    </div>
 
-                    <li>
-                        <a href="">Job hos 21-5</a>
-                    </li>
 
-                    <li>
-                        <a href="">Cookie- og privatlivspolitik</a>
-                    </li>
-                    <li>
-                        <a href="">Telefon 9-17: 70 26 11 55</a>
-                    </li>
-                    <li>
-                        <a href="">Email: info@21-5.dk</a>
-                    </li>
-                </ul>
-            </div>
+    <section id="foreninger">
+        <div class="top">
+            <h1>Foreninger</h1>
+            <p>Vi stifter vores foreninger, når vi har fundet 21 gode danske familier, som gerne vil være med. Dvs. der er INGEN usikkerhed OM foreningerne nogensinde bliver fuldtegnet, da vi ikke stifter før de er fuldtegnede.<br><br>Nedenstående foreninger er åbne for tilgang, og er derfor ikke stiftede endnu. Når 21 familier har meldt sig til hver forening, og de dermed er fuldtegnede, bliver de stiftet og derefter begynder den spændende boligjagt.<br><br>Klik her nedenfor for at læse mere om de nye foreninger på vej til at blive stiftet.</p>
         </div>
-    </footer>
+    </section>
+
+
+
+    <footer></footer>
 
     <script src="nav_script.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", start);
 
-        const url = "http://majakepler.dk/kea/09_cms/21-5/wordpress/wp-json/wp/v2/pages/14";
+        const url = "http://majakepler.dk/kea/09_cms/21-5/wordpress/wp-json/wp/v2/pages/115";
 
         let sektioner = [];
         let json;
@@ -119,10 +111,7 @@
             console.log("hent json");
 
             const resspons = await fetch(url)
-            //            sektioner = await resspons.json();
             json = await resspons.json();
-
-            //            visMenu();
             visSide();
         }
 
@@ -131,23 +120,6 @@
             document.querySelector("main h1").textContent = json.title.rendered;
             document.querySelector("main div").innerHTML = json.content.rendered;
         }
-
-
-        //        function visMenu() {
-        //
-        //            console.log(sektioner);
-        //            let dataFill = document.querySelector("#splach");
-        //            let template = document.querySelector("#sections");
-        //
-        //
-        //            sektioner.forEach(element => {
-        //                let klon = template.cloneNode(true).content;
-        //                klon.querySelector("h1").innerHTML = `${element.title.rendered}`;
-        //                klon.querySelector(".txt").innerHTML = `${element.content.rendered}`;
-        //                //                klon.querySelector("img").src = `${element.image}`;
-        //                dataFill.appendChild(klon);
-        //            })
-        //        }
 
     </script>
 </body>

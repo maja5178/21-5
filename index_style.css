@@ -34,14 +34,14 @@ main h1 {
 
 
 .splash_img img {
-    height: 90%;
+
     width: 100%;
 }
 
 
 .group {
     padding: 3vw;
-    background: lightblue;
+    background: #80B7B5;
     /*    width: 100vw*/
 }
 
@@ -49,14 +49,34 @@ main h1 {
 .group .header,
 .col .wp-block-group__inner-container {
     display: flex;
+    flex-wrap: wrap;
+
+    color: white;
+
+
+}
+
+.header .wp-block-group__inner-container {
+    margin: auto;
+}
+
+.header .wp-block-group__inner-container h2 {
+    font-size: 3rem;
+}
+
+.header .wp-block-group__inner-container h3 {
+    font-size: 1.5rem;
+    display: flex;
     justify-content: center;
 }
 
 
 
-.group .col {
-    /*    padding: 5vw;*/
 
+
+
+.group .col p {
+    line-height: 22px
 }
 
 .group .col_1,
@@ -65,8 +85,9 @@ main h1 {
     padding: 5vw;
 
     flex-grow: 1;
-    flex-basis: 600px;
+    flex-basis: 300px;
 }
+
 
 
 

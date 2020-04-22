@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+}
+
+main h1 {
+    display: none;
+}
+
+
+
+.splash_img img {
+    width: 100%;
+}
+
+main h2 {
+    font-size: 2rem;
+
+    margin-left: 12vw;
+
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+
+.top_content .wp-block-group__inner-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    padding-bottom: 5vw;
+
+
+}
+
+.top_content img {
+    width: 40vw;
+    padding-left: 5vw;
+}
+
+
+#meeting {
+    background-color: #9CCBCA;
+    padding: 5vw;
+}
+
+#meeting .top {
+    margin: auto;
+    max-width: 800px;
+    margin-bottom: 2vw;
+}
+
+#meeting .collums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+#meeting .button {
+    align-content: flex-end;
+}
+
+#meeting .col {
+    background-color: #D5E8E7;
+    width: 350px;
+    padding: 2vw;
+    margin: 2vw;
+}
+
+#meeting .col h3 {
+    font-size: 1.3rem;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+}
+
+@media screen and (max-width:600px) {
+    .top_content img {
+        width: 85vw;
+        padding-top: 8vw;
+    }
+}

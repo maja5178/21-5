@@ -1,3 +1,13 @@
+* {
+    margin: 0;
+
+}
+
+p {
+    line-height: 22px
+}
+
+
 header {
     position: fixed;
     width: 100%;
@@ -34,6 +44,7 @@ a {
 
 .logo img {
     width: 5vw;
+    margin-right: 16vw;
 
 
 }
@@ -41,6 +52,7 @@ a {
 .nav_links {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
 }
 
@@ -48,6 +60,7 @@ a {
     list-style: none;
     margin-right: 15px;
 }
+
 
 .nav_links a {
     text-decoration: none;
@@ -59,6 +72,47 @@ a {
     font-family: 'Barlow', sans-serif;
 
 }
+
+.nav_links a:hover {
+    color: #80B7B5;
+}
+
+nav .log_ind {
+    display: flex;
+    align-items: center;
+    padding-left: 1.5vw;
+    border-left: solid 1px white;
+}
+
+nav .log_ind img {
+    width: 2vw;
+}
+
+nav .log_ind a:hover {
+    color: #D5BFAA;
+}
+
+.lokal_nav {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.lokal_nav a {
+    color: black;
+    margin: 1vw;
+    padding: 1vw;
+    font-size: 1.1rem;
+
+}
+
+.lokal_nav a:hover {
+    color: #80B7B5;
+    border-bottom: solid 1px black;
+}
+
+
 
 /*.burger {
     display: none;
@@ -87,9 +141,97 @@ a {
     display: none;
 }
 
+footer {
+    background-color: #80B7B5;
+    height: 20vw;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer img {
+    width: 15vw;
+    padding: 2vw;
+}
+
+footer .collum {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+}
+
+footer .col {
+    width: 300px;
+
+}
+
+footer li a {
+    text-decoration: none;
+}
+
+footer .footer_links a {
+    color: black;
+}
+
+.lokal_nav {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.lokal_nav a {
+    color: black;
+    margin: 1vw;
+    padding: 1vw;
+    font-size: 1.1rem;
+
+}
+
+.lokal_nav a:hover {
+    color: #80B7B5;
+    border-bottom: solid 1px black;
+}
+
+
+.button {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    margin-bottom: 3vw;
+    margin-top: 3vw;
+
+
+}
+
+.button p {
+    text-decoration: none;
+    color: black;
+    font-size: 1.7rem;
+    margin: auto;
+}
+
+.button img {
+    margin: auto;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.button img:hover {
+
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in;
+}
+
 
 @media screen and (max-width:600px) {
-
 
     .burger div {
         display: block;
@@ -123,6 +265,27 @@ a {
     .logo img {
         width: 10vw
     }
+
+    nav .log_ind {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0vw;
+        border-left: none;
+        border-top: solid 1px white;
+        width: 40vw;
+    }
+
+    nav .log_ind img {
+        width: 7vw;
+    }
+
+    nav .log_ind li {
+        padding: 5vw;
+    }
+
+
+
 
 
     .show {

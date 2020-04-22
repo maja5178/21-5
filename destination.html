@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destinatioer</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="destination_style.css">
+
+    <!--    <link rel="stylesheet" href="index_style.css">-->
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav id="nav">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="Logo/logo_new_21-5.svg" alt="">
+                </div>
+            </a>
+
+            <div class="nav_right">
+
+                <ul class="nav_links show">
+
+                    <li>
+                        <a href="salg.html">Til salg</a>
+                    </li>
+
+                    <li>
+                        <a href="om_os.html">Om os</a>
+                    </li>
+
+                    <li>
+                        <a href="destinationer.html">Destinationer</a>
+                    </li>
+
+                    <li>
+                        <a href="kontakt.html">Kontakt</a>
+                    </li>
+
+                    <li>
+                        <a href="om.html">Mere</a>
+                    </li>
+                </ul>
+
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <section id="top_content">
+        <div class="top_con">
+            <img class="splach_img">
+            <div class="txt_top">
+                <h1 class="overskrift"></h1>
+                <p class="top_txt"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="middel_content">
+        <div class="collums">
+            <div class="col_1 col">
+                <h2 class="collum1_overskrift"></h2>
+                <p class="collum_1"></p>
+            </div>
+            <div class="col_2 col">
+                <h2 class="collum2_overskrift"></h2>
+                <p class="collum_2"></p>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <section id="splach">
+        <div>
+            <h2></h2>
+            <p></p>
+        </div>
+    </section>
+-->
+
+
+
+
+    <footer></footer>
+
+    <script src="nav_script.js"></script>
+
+    <script>
+        //find parametre (variabler) i url'en
+        let urlParams = new URLSearchParams(window.location.search);
+        //returner værdien for variablen "id"
+        let id = urlParams.get("id");
+        let destination;
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        async function getJson() {
+            //hent en enkelt ret udfra id'et
+            let jsonData = await fetch(`http://majakepler.dk/kea/09_cms/21-5/wordpress/wp-json/wp/v2/destination/${id}`);
+            destination = await jsonData.json();
+            visDestination();
+        }
+
+        //vis data om retten
+        function visDestination() {
+            document.querySelector(".splach_img").src = destination.splach_billede.guid;
+            document.querySelector(".overskrift").innerHTML = destination.overskrift;
+            document.querySelector(".top_txt").innerHTML = destination.top_tekst;
+            document.querySelector(".collum1_overskrift").innerHTML = destination.collum1_overskrift;
+            document.querySelector(".collum_1").innerHTML = destination.collum_1;
+            document.querySelector(".collum2_overskrift").innerHTML = destination.collum2_overskrift;
+            document.querySelector(".collum_2").innerHTML = destination.collum_2;
+        }
+
+        //        document.querySelector(".luk").addEventListener("click", () => {
+        // //link tilbage til den foregående side på "luk" knappen
+        // history.back();
+        // })
+
+    </script>
+</body>
+
+</html>

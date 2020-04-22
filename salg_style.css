@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+}
+
+
+main h1 {
+    display: none;
+}
+
+
+
+.splash_img img {
+    width: 100%;
+}
+
+h2 {
+    font-size: 2rem;
+
+    margin-left: 12vw;
+
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.top_content {
+    font-size: 1.2rem;
+
+    margin-left: 12vw;
+    margin-right: 12vw;
+
+}
+
+#foreninger .top {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}

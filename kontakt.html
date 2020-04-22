@@ -6,7 +6,7 @@
     <title>Kontakt</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="kontakt_style.css">
 
 </head>
 
@@ -14,56 +14,134 @@
 
     <header>
 
-        <nav>
+
+        <nav id="nav">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="Logo/logo_new_21-5.svg" alt="">
+                </div>
+            </a>
+
+            <div class="nav_right">
+
+                <ul class="nav_links show">
+
+                    <li>
+                        <a href="salg.html">Til salg</a>
+                    </li>
+
+                    <li>
+                        <a href="om_os.html">Om os</a>
+                    </li>
+
+                    <li>
+                        <a href="destinationer.html">Destinationer</a>
+                    </li>
+
+                    <li>
+                        <a href="kontakt.html">Kontakt</a>
+                    </li>
+
+                    <li>
+                        <a href="om.html">Mere</a>
+                    </li>
+                </ul>
+
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+
 
         </nav>
 
     </header>
 
-    <section class="top"></section>
+
+    <section id="splach"></section>
     <main>
-        <img src="" alt="">
-        <div class="txt">
-            <h1></h1>
-            <p></p>
-        </div>
-        <div class="img">
-            <img src="" alt="">
-        </div>
+        <h1></h1>
+        <div></div>
     </main>
 
-    <section class="bottom"></section>
-    <template>
-        <articel>
-
-            <h1></h1>
-            <p></p>
-
-            <div>
-                <div class="col_1">
-                    <h2></h2>
-                    <p></p>
-                    <div class="button">
-                        <p></p>
-                        <img src="" alt="">
-                    </div>
+    <section id="meeting">
+        <div class="top">
+            <h2>Book et møde </h2>
+            <p>Her hos 21-5 har vi 2 former for møder. Vores afslappede kaffemøde samt vores indholdsfyldte orienteringsmøder møde. Du kan læser mere omkring vores 2 former og hvis du er interesseret kan du skrive dig op til en eller begge møder.</p>
+        </div>
+        <div class="collums">
+            <div class="col">
+                <div>
+                    <h3>Kaffemøde</h3>
+                    <p>Hvis I overvejer at være med i en af vores foreninger, så kom til kaffemøde og få svar på alle de spørgsmål, I måtte have.<br><br>Vi elsker at drikke en kop kaffe (eller the eller vand med alle de familier, som gerne vil høre mere om 21-5. <br><br>På kaffemødet får I svar på alle de spørgsmål, I måtte have, og I får mødt nogle af os.<br>I er altid velkomne forbi til en kop kaffe og en god 21-5 snak, også selvom I måske først skal være med i 21-5 om nogle år.<br><br>Vi er ofte i Jylland, så sig endelig også til hvis I gerne vil invitere os på en kop kaffe, eller vi skal mødes et sted på vejen.<br><br>Book et kaffemøde her nedenfor:</p>
                 </div>
 
-                <div class="col_2">
-                    <h2></h2>
-                    <p></p>
+                <a href="">
                     <div class="button">
-                        <p></p>
-                        <img src="" alt="">
+                        <p>Kaffemøde</p>
+                        <img src="imgs/arrow_right.png" alt="">
                     </div>
-                </div>
+                </a>
+
             </div>
-        </articel>
-    </template>
+            <div class="col">
+                <div>
+                    <h3>Orienteringsmøder</h3>
+                    <p>Når vi åbner nye foreninger, holder vi orienteringsmøder rundt omkring i landet. Møderne starter kl. 17.00 og varer oftest op imod 3 timer helt afhængigt af spørgelysten.<br><br>På møderne bliver de nye 21-5 foreninger præsenteret, og der vil være rig lejlighed til at spørge ind.Vi gennemgår også 21-5 konceptet generelt, så alle kan gå hjem med en større forståelse af, hvordan det hele fungerer.<br><br>Vi får altid besøg af en 21-5 familie, som kommer og fortæller om deres oplevelser ved at være med i en 21-5 forening. Der vil blandt andet blive serveret sandwish og noget at drikke. samt od tid til at hyggesnakke.<br><br>Det vigtigste ved møderne er, at alle får svar på ALLE de spørgsmål der måtte være, INGEN må gå hjem med et spørgsmål sidden et eller andet sted i kroppen.<br><br>Vi glæder os altid til at fortælle om 21-5, og til at møde nye potentielle 21-5 familier.
+                    </p>
+                </div>
+
+                <a href="">
+                    <div class="button">
+                        <p>Orienteringsmøder</p>
+                        <img src="imgs/arrow_right.png" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
 
     <footer></footer>
 
     <script src=""></script>
+
+    <script src="nav_script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        const url = "http://majakepler.dk/kea/09_cms/21-5/wordpress/wp-json/wp/v2/pages/99";
+
+        let sektioner = [];
+        let json;
+
+
+        function start() {
+            console.log("start");
+            hentJSON();
+        }
+
+        async function hentJSON() {
+            console.log("hent json");
+
+            const resspons = await fetch(url)
+            //            sektioner = await resspons.json();
+            json = await resspons.json();
+
+            //            visMenu();
+            visSide();
+        }
+
+        function visSide() {
+            console.log(json);
+            document.querySelector("main h1").textContent = json.title.rendered;
+            document.querySelector("main div").innerHTML = json.content.rendered;
+        }
+
+    </script>
 
 </body>
 
