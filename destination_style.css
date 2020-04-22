@@ -18,7 +18,7 @@
 
 }
 
-.collums {
+#middel_content .collums {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 25px;
@@ -32,21 +32,21 @@
 
 
 
-.col {
+#middel_content .col {
     margin: 0 auto;
     padding: 1vw;
     max-width: 400px;
     background-color: #D5E8E7;
 }
 
-.col h2 {
+#middel_content .col h2 {
     padding-left: 1vw;
     padding-right: 1vw;
     padding-bottom: 1vw;
 
 }
 
-.col p {
+#middel_content .col p {
     padding-left: 1vw;
     padding-right: 1vw;
     padding-bottom: 1vw;

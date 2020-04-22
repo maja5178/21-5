@@ -28,7 +28,8 @@ main h1 {
     position: absolute;
     top: 20%;
     left: 6%;
-    color: white
+    color: white;
+    text-shadow: 2px 2px 5px rgba(2, 2, 2, 0.54);
 }
 
 

@@ -3,6 +3,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 p {
     line-height: 22px
 }
@@ -92,27 +96,6 @@ nav .log_ind a:hover {
     color: #D5BFAA;
 }
 
-.lokal_nav {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-
-}
-
-.lokal_nav a {
-    color: black;
-    margin: 1vw;
-    padding: 1vw;
-    font-size: 1.1rem;
-
-}
-
-.lokal_nav a:hover {
-    color: #80B7B5;
-    border-bottom: solid 1px black;
-}
-
-
 
 /*.burger {
     display: none;
@@ -141,13 +124,67 @@ nav .log_ind a:hover {
     display: none;
 }
 
-footer {
-    background-color: #80B7B5;
-    height: 20vw;
-    width: 100%;
-    align-items: center;
+/*************** LOKAL NAV START *****************/
+.lokal_nav {
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
+}
+
+.lokal_nav a {
+    color: black;
+    margin: 1.5vw;
+    padding: 1vw;
+    font-size: 1.2rem;
+
+}
+
+.lokal_nav a:hover {
+    color: #80B7B5;
+    border-bottom: solid 1px black;
+}
+
+/*************** LOKAL NAV SLUT *****************/
+
+
+/*************** FOOTER START ******************/
+
+footer {
+    background-color: rgba(90, 100, 99, 0.77);
+
+    height: auto;
+    width: 100%;
+
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+}
+
+footer .social {
+
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 18vw;
+    margin-right: 18vw;
+    margin-bottom: 2vw;
+
+    border-bottom: solid 0.7px rgba(255, 255, 255, 0.85);
+}
+
+footer .social a {
+
+    color: white;
+    padding: 2vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 1.3rem;
+}
+
+footer .social a:hover {
+    color: #80B7B5;
 }
 
 footer img {
@@ -161,43 +198,37 @@ footer .collum {
     align-items: center;
     justify-content: center;
 
-
-
-
 }
 
 footer .col {
     width: 300px;
-
 }
 
-footer li a {
-    text-decoration: none;
+footer li {
+    list-style-type: none;
+    ;
 }
 
 footer .footer_links a {
-    color: black;
-}
-
-.lokal_nav {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-
-}
-
-.lokal_nav a {
-    color: black;
-    margin: 1vw;
-    padding: 1vw;
+    color: white;
+    ;
     font-size: 1.1rem;
-
 }
 
-.lokal_nav a:hover {
+footer .footer_links a:hover {
     color: #80B7B5;
-    border-bottom: solid 1px black;
+
 }
+
+footer .list {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+
+}
+
+/************* FOOTER SLUT*************/
+
+
 
 
 .button {
@@ -284,11 +315,13 @@ footer .footer_links a {
         padding: 5vw;
     }
 
-
-
-
-
     .show {
         transform: translatex(70%);
         transition: transform 0.5s ease-in-out;
     }
+
+
+    footer img {
+        display: none;
+    }
+}
