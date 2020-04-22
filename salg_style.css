@@ -128,3 +128,82 @@ main h1 {
 
 
 /************** SLIDER SLUT **************/
+
+
+#gensalg {
+    /*    overflow-x: hidden;*/
+}
+
+#gensalg .collums {
+    display: flex;
+
+}
+
+#gensalg .col_1 {
+    width: 200%;
+
+}
+
+
+#gensalg .col_1 img {
+    width: 100%;
+}
+
+#gensalg .col_2 {
+    margin: 5vw;
+
+    max-width: 100%,
+}
+
+
+
+#stiftede .top {
+    max-width: 800px;
+    margin: auto;
+    padding: 4vw;
+}
+
+
+
+#proces {
+    padding: 5vw;
+    background-color: #D5E8E7;
+}
+
+#proces .top {
+    display: flex;
+    justify-content: center;
+
+}
+
+#proces .collums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#proces .col {
+    width: 400px;
+    padding: 3vw;
+}
+
+
+@media screen and (max-width:600px) {
+
+
+    #gensalg {}
+
+    #gensalg .collums {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #gensalg .col_1 {
+        width: 100%;
+
+    }
+
+
+
+}
