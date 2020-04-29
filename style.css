@@ -7,8 +7,30 @@ html {
     scroll-behavior: smooth;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 p {
-    line-height: 22px
+    line-height: 24px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 1.2rem;
+    padding-top: 0.5vw;
+    color: #272727;
+
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Arvo', serif;
+    color: #272727;
+}
+
+li {
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 1.1rem;
+    color: #272727;
 }
 
 
@@ -62,7 +84,7 @@ a {
 
 .nav_links li {
     list-style: none;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 
@@ -72,8 +94,11 @@ a {
 
     letter-spacing: 3px;
 
-    font-size: 1rem;
-    font-family: 'Barlow', sans-serif;
+    font-size: 1.2rem;
+
+    font-family: 'Baloo Bhaina 2', cursive;
+
+
 
 }
 
@@ -130,20 +155,27 @@ nav .log_ind a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border-bottom: 0.7px solid rgba(39, 39, 39, 0.94);
+    margin-left: 13vw;
+    margin-right: 13vw;
 
 }
 
 .lokal_nav a {
     color: black;
-    margin: 1.5vw;
-    padding: 1vw;
+    margin: 1vw;
+    padding: 0.3vw;
     font-size: 1.2rem;
+
+    font-family: 'Baloo Bhaina 2', cursive;
+
+
 
 }
 
 .lokal_nav a:hover {
     color: #80B7B5;
-    border-bottom: solid 1px black;
+    border-bottom: solid 0.7px rgba(39, 39, 39, 0.94);
 }
 
 /*************** LOKAL NAV SLUT *****************/
@@ -159,11 +191,17 @@ footer {
 
     padding-top: 2vw;
     padding-bottom: 4vw;
+
+
+    line-height: 24px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 1.2rem;
+    padding-top: 0.5vw;
+    color: #272727;
+
 }
 
 footer .social {
-
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -211,7 +249,6 @@ footer li {
 
 footer .footer_links a {
     color: white;
-    ;
     font-size: 1.1rem;
 }
 
@@ -235,7 +272,7 @@ footer .list {
     display: flex;
     flex-direction: column;
 
-    margin: auto;
+    justify-content: center;
     margin-bottom: 3vw;
     margin-top: 3vw;
 
@@ -245,19 +282,24 @@ footer .list {
 .button p {
     text-decoration: none;
     color: black;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin: auto;
+    color: #272727;
 }
 
 .button img {
-    margin: auto;
+
+    align-self: center;
+    width: 6vw;
+
     margin-top: 1vw;
     margin-bottom: 1vw;
+
 }
 
 .button img:hover {
 
-    transform: scale(1.05);
+    transform: scale(1.07);
     transition: transform 0.2s ease-in;
 }
 
@@ -272,6 +314,8 @@ footer .list {
         background-color: #ffffff;
         margin: 5px;
     }
+
+
 
     .nav_links {
         display: none;
@@ -323,5 +367,17 @@ footer .list {
 
     footer img {
         display: none;
+    }
+
+    /*************** button ***************/
+
+    .button {
+        margin-top: 8vw;
+        margin-bottom: 8vw;
+
+    }
+
+    .button img {
+        width: 16vw;
     }
 }

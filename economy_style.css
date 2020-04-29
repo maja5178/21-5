@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+}
+
+
+main h1 {
+    display: none;
+}
+
+
+
+.splash_img img {
+    width: 100%;
+}
+
+
+
+#top_content .top {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+
+#top_content {
+    padding-bottom: 4vw;
+}
+
+
+
+#PDF {
+    background-color: #80B7B5;
+
+}
+
+#PDF p {
+    color: white;
+
+}
+
+#PDF h2 {
+    color: white;
+
+}
+
+#PDF .col_2 img {
+    transform: rotate(90deg);
+}
+
+#PDF .collums {
+    display: flex;
+    align-items: center;
+
+
+}
+
+#PDF .col_1 {
+    width: 100%;
+
+
+}
+
+
+#PDF .col_1 img {
+    width: 100%;
+}
+
+#PDF .col_2 {
+    margin: 5vw;
+
+    max-width: 100%,
+}
+
+
+#skat .top {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+
+#skat .bottom {
+    max-width: 950px;
+    margin: auto;
+
+    padding-bottom: 4vw;
+}
+
+#skat .bottom p {
+    font-size: 2rem;
+
+    color: #80B7B5;
+
+
+}
+
+#investering {
+    background-color: #D5E8E7;
+    padding: 4vw;
+
+}
+
+#investering .top {
+    display: flex;
+    justify-content: center;
+
+}
+
+#investering .collum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+#investering .col {
+
+    max-width: 460px;
+
+    padding: 2vw;
+    margin-top: 1vw;
+}
+
+#investering .col h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    padding: 0.5vw;
+}
+
+
+#finansiering .top {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+
+#finansiering {
+    padding-bottom: 4vw;
+}
+
+
+@media screen and (max-width:600px) {}

@@ -45,7 +45,7 @@ main h1 {
 }
 
 #arrow_left {
-    border: solid rgba(18, 18, 18, 0.75);
+    border: solid white;
     border-width: 0 5px 5px 0;
     /*display: inline-block;*/
     padding: 20px;
@@ -56,7 +56,7 @@ main h1 {
 }
 
 #arrow_right {
-    border: solid rgba(18, 18, 18, 0.75);
+    border: solid white;
     border-width: 0 5px 5px 0;
     /*display: inline-block;*/
     padding: 20px;
@@ -78,7 +78,7 @@ main h1 {
     width: 70vw;
 
     height: 70vh;
-    background-color: #80B7B5;
+    /*    background-color: #80B7B5;*/
     overflow-x: hidden;
     overflow-y: hidden;
 
@@ -98,10 +98,33 @@ main h1 {
 
 .slide-content h2 {
     font-size: 3.5rem;
-    color: #fff;
     margin: 0.5rem;
     letter-spacing: 0.2rem;
 
+}
+
+
+
+.slide h2 {
+    text-shadow: 2px 2px 5px rgba(2, 2, 2, 0.54);
+    color: white;
+}
+
+.slide h3 {
+    text-shadow: 2px 2px 8px rgba(2, 2, 2, 0.66);
+    color: white;
+    font-size: 1.4rem;
+}
+
+.slide p {
+    text-shadow: 2px 2px 12px rgba(2, 2, 2, 0.85);
+    color: white;
+    font-size: 1.3rem;
+}
+
+.slide .button p {
+    text-shadow: 2px 2px 8px rgba(2, 2, 2, 0.66);
+    color: white;
 }
 
 .wrap {
@@ -117,13 +140,20 @@ main h1 {
 
 }
 
-.slide1 {}
+.slide1 {
+    background-image: url(imgs/21_5/18092018-FLE_8336.jpg);
 
-.slide2 {}
+}
+
+.slide2 {
+    background-image: url(imgs/21_5/_GR21359.jpg);
+
+}
 
 .slide3 {
-    background-image: url()
+    background-image: url(imgs/21_5/_GS04389.jpg);
 }
+
 
 
 
@@ -204,6 +234,33 @@ main h1 {
 
     }
 
+    #slider,
+    .wrap,
+    .slide-content {
+        width: 90vw;
+    }
 
+    .slide h2 {
+        font-size: 1.6rem;
+
+    }
+
+    .slide h3 {
+
+        font-size: 1.1rem;
+        padding: 5vw;
+
+    }
+
+    .slide p {
+
+        font-size: 1.1rem;
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+
+    .slide .button p {
+        font-size: 1rem;
+    }
 
 }

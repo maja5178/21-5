@@ -8,28 +8,11 @@ main h1 {
     display: none;
 }
 
-
 h2 {
     font-size: 2rem;
     margin-top: 1vw;
     margin-bottom: 1vw;
 }
-
-p {
-    font-size: 1.1rem;
-    line-height: 22px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-
-
-
-
 
 .top_img img {
     width: 100%
@@ -37,10 +20,8 @@ html {
 
 .top_content {
     max-width: 800px;
-    display: flex;
-    justify-content: center;
     margin: auto;
-    padding-bottom: 4vw;
+    padding: 4vw;
 }
 
 #value {

@@ -57,20 +57,30 @@ main h1 {
 
 }
 
+.group .header,
+.col .wp-block-group__inner-container p {}
+
 .header .wp-block-group__inner-container {
     margin: auto;
+
 }
 
 .header .wp-block-group__inner-container h2 {
     font-size: 3rem;
+    color: white;
 }
 
 .header .wp-block-group__inner-container h3 {
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
+    color: white;
 }
 
+.header,
+.col .wp-block-group__inner-container p {
+    color: white;
+}
 
 
 

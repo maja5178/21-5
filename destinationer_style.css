@@ -2,12 +2,9 @@
     margin: 0;
 }
 
-
 main h1 {
     display: none;
 }
-
-
 
 .splash_img img {
     width: 100%;
@@ -55,11 +52,19 @@ main h2 {
     align-items: center;
 }
 
+
+
 #destinatioer h1 {
     position: absolute;
     color: white;
     font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(2, 2, 2, 0.54);
 
+}
+
+#destinatioer .test_flex:hover {
+    filter: brightness(80%);
+    transform: scale(1.01);
 }
 
 #proces {
