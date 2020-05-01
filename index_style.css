@@ -127,6 +127,34 @@ main h1 {
 }
 
 
+/**************************** MORE **********************************/
+
+#more .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 4vw;
+}
+
+
+#more .collums {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#more .col {
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+}
+
+#more .col_1 img {
+    transform: scaleX(-1)
+}
+
+
 @media screen and (max-width:600px) {
 
     .txt_col .buttons .wp-block-group__inner-container {

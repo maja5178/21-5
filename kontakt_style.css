@@ -16,10 +16,11 @@ main h1 {
 main h2 {
     font-size: 2rem;
 
-    margin-left: 12vw;
+    margin-left: 15vw;
 
     margin-top: 3vw;
     margin-bottom: 3vw;
+
 }
 
 
@@ -28,14 +29,15 @@ main h2 {
     flex-wrap: wrap;
 
     justify-content: center;
+    align-items: center;
 
-    padding-bottom: 5vw;
-
-
+    padding-bottom: 4vw;
+    /*    max-width: 800px*/
 }
 
-.top_content img {
-    width: 40vw;
+.top_content iframe {
+    width: 25vw;
+    height: 25vw;
     padding-left: 5vw;
 }
 
@@ -77,8 +79,9 @@ main h2 {
 }
 
 @media screen and (max-width:600px) {
-    .top_content img {
+    .top_content iframe {
         width: 85vw;
+        height: 60vw;
         padding-top: 8vw;
     }
 }
