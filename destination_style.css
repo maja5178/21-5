@@ -66,3 +66,121 @@ h2 {
 p {
     line-height: 22px
 }
+
+
+
+/************** ARROW **************/
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow_left {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    /*display: inline-block;*/
+    padding: 20px;
+
+    margin-left: 30px;
+
+    transform: rotate(135deg);
+}
+
+#arrow_right {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    /*display: inline-block;*/
+    padding: 20px;
+
+    transform: rotate(-45deg);
+    right: 0;
+    margin-right: 30px;
+}
+
+/************** ARROW SLUT **************/
+
+/************** SLIDER **************/
+#slider,
+.wrap,
+.slide-content {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+    width: 70vw;
+
+    height: 70vh;
+    /*    background-color: #80B7B5;*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+}
+
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+
+    padding-bottom: 45px;
+
+}
+
+
+
+.wrap {
+    position: relative;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.slide1 {
+    background-image: url(imgs/21_5/18092018-FLE_8336.jpg);
+
+}
+
+.slide2 {
+    background-image: url(imgs/21_5/_GR21359.jpg);
+
+}
+
+.slide3 {
+    background-image: url(imgs/21_5/_GS00370.jpg);
+}
+
+
+
+
+/************** SLIDER SLUT **************/
+
+#salg {
+    margin: 4vw;
+}
+
+#salg .top {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width:600px) {
+
+
+    #slider,
+    .wrap,
+    .slide-content {
+        width: 90vw;
+    }
+
+}
