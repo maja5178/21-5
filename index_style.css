@@ -127,7 +127,63 @@ main h1 {
 }
 
 
+
+
+/*************************** foreninger ********************************/
+
+#foreninger .collum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#foreninger .col {
+    background: rgba(128, 183, 181, 0.58);
+
+    margin: 2vw;
+    padding: 3vw;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#foreninger .col img {
+    width: 15vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+#foreninger .col:hover {
+    background: #80b7b5;
+}
+
+#foreninger h2 {
+    margin-bottom: 1vw;
+    padding: 1vw;
+    border-bottom: solid 1.4px black;
+}
+
+#foreninger p .small : {
+    font-size: 0.1rem;
+}
+
 /**************************** MORE **********************************/
+
+#more .banner img {
+    width: 100%
+}
+
+#more .top p {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 1vw;
+}
 
 #more .top {
     display: flex;
