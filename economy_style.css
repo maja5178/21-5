@@ -142,4 +142,29 @@ main h1 {
 }
 
 
-@media screen and (max-width:600px) {}
+@media screen and (max-width:600px) {
+
+    #top_content .top {
+        padding: 5vw;
+    }
+
+    #PDF .collums {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    #skat {
+        padding: 5vw;
+    }
+
+    #skat .bottom p {
+        text-align: center;
+        line-height: 30px;
+    }
+
+    #finansiering .top {
+        padding: 5vw;
+    }
+}

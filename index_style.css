@@ -213,9 +213,35 @@ main h1 {
 
 @media screen and (max-width:600px) {
 
+    main h1 {
+
+        font-size: 8vw;
+
+        top: 10%;
+
+    }
+
+    .header .wp-block-group__inner-container h2 {
+        font-size: 1.7rem;
+        padding-bottom: 2vw;
+        margin: 2vw;
+
+    }
+
+    .header .wp-block-group__inner-container h3 {
+        font-size: 1.2rem;
+        margin: 2vw;
+
+    }
+
     .txt_col .buttons .wp-block-group__inner-container {
 
 
         font-size: 1rem;
         padding: 3vw;
+    }
+
+    #foreninger .col img {
+        width: 30vw;
+
     }

@@ -79,9 +79,16 @@ main h2 {
 }
 
 @media screen and (max-width:600px) {
+
+    .top_content .wp-block-group__inner-container {
+        margin: 5vw;
+    }
+
+
     .top_content iframe {
-        width: 85vw;
-        height: 60vw;
+        padding-left: 0;
+        width: 95vw;
+        height: 70vw;
         padding-top: 8vw;
     }
 }

@@ -88,3 +88,10 @@ main h2 {
     width: 400px;
     padding: 3vw;
 }
+
+@media screen and (max-width:600px) {
+    #destinatioer img {
+        width: 90%;
+        margin: 2.5vw;
+    }
+}

@@ -177,6 +177,18 @@ p {
 @media screen and (max-width:600px) {
 
 
+    #middel_content .collums {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    }
+
+    #middel_content .col {
+        margin: 3vw;
+
+
+
+    }
+
     #slider,
     .wrap,
     .slide-content {

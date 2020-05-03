@@ -220,6 +220,13 @@ main h1 {
 
 @media screen and (max-width:600px) {
 
+    #foreninger .top {
+        margin: 5vw;
+    }
+
+    #salg .top {
+        margin: 5vw;
+    }
 
     #gensalg {}
 
@@ -261,6 +268,10 @@ main h1 {
 
     .slide .button p {
         font-size: 1rem;
+    }
+
+    #stiftede top {
+        margin: 5vw;
     }
 
 }
